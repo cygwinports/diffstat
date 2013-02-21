@@ -1,0 +1,16 @@
+NAME="diffstat"
+VERSION=1.56
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Generates histogram of diff/patch files"
+DESCRIPTION="This program is a simple filter that reads the output of the diff
+program, and produces a histogram of the total number of lines that were changed.
+It is useful for scanning a patch file to see which files were changed."
+HOMEPAGE="http://invisible-island.net/diffstat/"
+SRC_URI="ftp://invisible-island.net/diffstat/diffstat-${VERSION}.tgz"
+
+src_compile() {
+	cd ${B}
+	cygconf
+	cygmake
+}
